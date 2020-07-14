@@ -8,6 +8,8 @@ import kr.co.tjoeun.test_20200714.adapters.MainViewPagerAdapter
 
 class MainActivity : BaseActivity() {
 
+    lateinit var mvpa : MainViewPagerAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -21,7 +23,7 @@ class MainActivity : BaseActivity() {
 
     override fun SetupEvents() {
 
-        val mvpa = MainViewPagerAdapter(supportFragmentManager)
+        mvpa = MainViewPagerAdapter(supportFragmentManager)
         viewPager.adapter=mvpa
 
         tabLayout.setupWithViewPager(viewPager)
