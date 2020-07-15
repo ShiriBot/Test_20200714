@@ -23,12 +23,12 @@ class ChangeNicknameActivity : BaseActivity() {
     override fun SetupEvents() {
 
         changeNickNameClearBtn.setOnClickListener {
-            val resultIntent : Intent()
-            resultIntent.putExtra("nickName",changeNickNameEdt.text)
+
+            val inputNickname = changeNickNameEdt.text.toString()
+            val resultIntent = Intent()
+            resultIntent.putExtra("nickName",inputNickname)
             setResult(Activity.RESULT_OK,resultIntent)
             finish()
-
-
         }
 
     }

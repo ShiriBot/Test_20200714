@@ -6,14 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".ChangeNicknameActivity"
     android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="10dp">
 
 
     <EditText
         android:id="@+id/changeNickNameEdt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="바뀔 닉네임 입력"/>
+        android:hint="바뀔 닉네임 입력"/>
 
     <Button
         android:id="@+id/changeNickNameClearBtn"
