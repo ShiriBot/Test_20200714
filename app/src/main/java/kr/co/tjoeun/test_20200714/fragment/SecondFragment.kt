@@ -1,5 +1,6 @@
 package kr.co.tjoeun.test_20200714.fragment
 
+import android.app.Activity.RESULT_OK
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -37,6 +38,12 @@ class SecondFragment: Fragment() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode==REQ_FOR_NEW_NICKNAME){
+            if (resultCode==RESULT_OK){
+                val newNickName = data?.getStringExtra("nickName")
+                nickNameTxt.text=newNickName
+            }
+        }
 
 
     }
